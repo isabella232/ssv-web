@@ -24,6 +24,7 @@ jobs:
 
       - name: Run lint
         run: echo "$TESTSECRET and $CONTRACT_ADDRESS"
+        environment: testci
         env:
           TESTSECRET: ${{ secrets.TESTSECRET }}
           CONTRACT_ADDRESS: ${{ secrets.PROD_CONTRACT_ADDRESS }}
