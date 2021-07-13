@@ -23,7 +23,10 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Run lint
-        run: echo ${{ secrets.TESTSECRET }}
+        run: echo "$TESTSECRET"
+        env:
+          TESTSECRET: ${{ secrets.TESTSECRET }}
+          CONTRACT_ADDRESS: ${{ secrets.PROD_CONTRACT_ADDRESS }}
 
 
       - name: Install packages
