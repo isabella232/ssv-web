@@ -12,7 +12,7 @@ on:
 
 jobs:
   lint:
-    environment: github.ref
+    environment: $GITHUB_REF
     runs-on: ubuntu-latest
 
     steps:
