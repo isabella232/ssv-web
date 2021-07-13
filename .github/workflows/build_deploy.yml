@@ -12,7 +12,7 @@ on:
 
 jobs:
   lint:
-    environment: testci
+    environment: test
     runs-on: ubuntu-latest
 
     steps:
