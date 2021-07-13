@@ -12,7 +12,7 @@ on:
 
 jobs:
   lint:
-    environment: test
+    environment: github.ref
     runs-on: ubuntu-latest
 
     steps:
