@@ -18,7 +18,7 @@ import { readFile, encryptShares, createThreshold, extractPrivateKey} from './he
 // variables
 const argv = require('minimist');
 let isArgumentsValid: boolean = true;
-const argumentsCMD = argv(process.argv.slice(2));
+const argumentsCMD = argv(process.argv.slice(2), { string: ['password'] });
 
 const requireArguments: string[] = ['filePath', 'password', 'operators'];
 const operators = argumentsCMD.operators && argumentsCMD.operators.split(',');
